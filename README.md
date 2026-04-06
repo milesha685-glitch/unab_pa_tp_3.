@@ -86,3 +86,65 @@ class Linea:
     # Método adicional: mostrar la línea
     def impresion(self):
         return f"Línea desde {self._punto_a.impresion()} hasta {self._punto_b.impresion()}"
+        Ejercicio 4: Clase Cancion
+        class Cancion:
+    def __init__(self, titulo, autor):
+        self.titulo = titulo
+        self.autor = autor
+
+    # Getter título
+    def get_titulo(self):
+        return self.titulo
+
+    # Getter autor
+    def get_autor(self):
+        return self.autor
+
+    # Setter título
+    def set_titulo(self, titulo):
+        self.titulo = titulo
+
+    # Setter autor
+    def set_autor(self, autor):
+        self.autor = autor
+        Ejercicio 5: Clase Libro + Persona
+        class Persona:
+    def __init__(self, nombre, apellido):
+        self.nombre = nombre
+        self.apellido = apellido
+
+    def get_nombre_completo(self):
+        return f"{self.apellido}, {self.nombre}"
+        class Libro:
+    def __init__(self, titulo, autor, isbn, paginas, edicion, editorial, ciudad, pais, fecha_edicion):
+        self.titulo = titulo
+        self.autor = autor  # objeto Persona
+        self.isbn = isbn
+        self.paginas = paginas
+        self.edicion = edicion
+        self.editorial = editorial
+        self.ciudad = ciudad
+        self.pais = pais
+        self.fecha_edicion = fecha_edicion
+
+    # Getters y setters (ejemplo de algunos)
+    def get_titulo(self):
+        return self.titulo
+
+    def set_titulo(self, titulo):
+        self.titulo = titulo
+
+    def get_autor(self):
+        return self.autor
+
+    def set_autor(self, autor):
+        self.autor = autor
+
+    # Método para mostrar información
+    def mostrar_info(self):
+        print(f"Título: {self.titulo} {self.edicion}a. edición")
+        print(f"Autor: {self.autor.get_nombre_completo()}")
+        print(f"ISBN: {self.isbn}")
+        print(f"{self.editorial}, {self.ciudad} ({self.pais})")
+        print(f"{self.fecha_edicion}")
+        print(f"{self.paginas} páginas")
